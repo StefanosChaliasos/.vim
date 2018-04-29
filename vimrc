@@ -81,6 +81,10 @@ set hlsearch
 " Reload vim config without having to restart Editor
 map <leader>s :source ~/.vimrc<CR>
 
+" ubuntu
+set encoding=utf-8
+set fileencoding=utf-8
+
 " lightline
 set laststatus=2
 
