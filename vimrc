@@ -97,17 +97,21 @@ map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " python
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
+au BufNewFile,BufRead python
+    \ setlocal tabstop=4 |
+    \ setlocal softtabstop=4 |
+    \ setlocal shiftwidth=4 |
+    \ setlocal textwidth=79 |
+    \ setlocal expandtab |
+    \ setlocal autoindent |
+    \ setlocal fileformat=unix
 
 " js hmtl css ts
 au BufNewFile,BufRead *.js, *.html, *.css, *ts
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2
+    \ setlocal tabstop=2 |
+    \ setlocal softtabstop=2 |
+    \ setlocal shiftwidth=2
+
+" text and tex files
+autocmd BufRead,BufNewFile  *.txt setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile  *.tex setlocal spell spelllang=en_us
