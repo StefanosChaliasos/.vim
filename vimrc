@@ -78,6 +78,11 @@ set hlsearch
 " leader key
 " Default: let mapleader="\"
 
+" Personal shortcuts
+map <leader>pt :put =strftime(\"%c\") <CR><Esc>
+map <leader>ww :w <CR><Esc>
+map <leader>wq :wq <CR><Esc>
+
 " Reload vim config without having to restart Editor
 map <leader>s :source ~/.vimrc<CR>
 
@@ -111,10 +116,10 @@ au BufNewFile,BufRead python
     \ setlocal fileformat=unix
 
 " js hmtl css ts
-au BufNewFile,BufRead *.js, *.html, *.css, *ts
+au BufNewFile,BufRead *.js, *.html, *.css, *.ts
     \ setlocal tabstop=2 |
-    \ setlocal softtabstop=2 |
-    \ setlocal shiftwidth=2
+    \| setlocal softtabstop=2 |
+    \| setlocal shiftwidth=2
 
 " text and tex files
 autocmd BufRead,BufNewFile  *.txt setlocal spell spelllang=en_us
