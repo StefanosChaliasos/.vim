@@ -32,6 +32,9 @@ colorscheme molokai
 " highlight Normal ctermbg=none
 " highlight NonText ctermbg=none
 
+" Set variables
+let g:email="schaliasos@protonmail.com"
+
 " :W sudo saves the file
 " " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
@@ -40,7 +43,7 @@ command W w !sudo tee % > /dev/null
 set autoread
 
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+set so=3
 
 " fonts
 " add fonts to "usr/local/share/fonts
@@ -82,6 +85,8 @@ set hlsearch
 map <leader>pt :put =strftime(\"%c\") <CR><Esc>
 map <leader>ww :w <CR><Esc>
 map <leader>wq :wq <CR><Esc>
+map <leader>qq :q <CR><Esc>
+map <leader>noh :noh <CR><Esc>
 
 " Reload vim config without having to restart Editor
 map <leader>s :source ~/.vimrc<CR>
@@ -102,6 +107,9 @@ let g:NERDSpaceDelims = 1
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" javascript-vim
+let g:javascript_plugin_jsdoc = 1
+
 "ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -116,11 +124,12 @@ au BufNewFile,BufRead python
     \ setlocal fileformat=unix
 
 " js hmtl css ts
-au BufNewFile,BufRead *.js, *.html, *.css, *.ts
-    \ setlocal tabstop=2 |
-    \| setlocal softtabstop=2 |
-    \| setlocal shiftwidth=2
+" au BufNewFile,BufRead *.js, *.html, *.css, *.ts
+    " \ setlocal tabstop=2 |
+    " \| setlocal softtabstop=2 |
+    " \| setlocal shiftwidth=2
 
 " text and tex files
 autocmd BufRead,BufNewFile  *.txt setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile  *.tex setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile  *.md setlocal spell spelllang=en_us

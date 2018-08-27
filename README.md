@@ -10,3 +10,13 @@ To download plugins:
 ```bash
 git submodule update --init --recursive
 ```
+
+## Extra Instructions
+
+* Compile procvim.vim
+
+```bash
+pushd ~/.vim/bundle/vimproc.vim
+make
+popd
+```
