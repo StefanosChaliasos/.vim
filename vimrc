@@ -78,6 +78,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 " search: highlight found words
 set hlsearch
 
+" Spell checker
+set spell spelllang=en_us
+
 " leader key
 " Default: let mapleader="\"
 
@@ -87,6 +90,8 @@ map <leader>ww :w <CR><Esc>
 map <leader>wq :wq <CR><Esc>
 map <leader>qq :q <CR><Esc>
 map <leader>noh :noh <CR><Esc>
+map <leader>d :setlocal spell spelllang=en_us
+map <leader>sel :setlocal spell spelllang=el
 
 " Reload vim config without having to restart Editor
 map <leader>s :source ~/.vimrc<CR>
@@ -130,6 +135,6 @@ au BufNewFile,BufRead python
     " \| setlocal shiftwidth=2
 
 " text and tex files
-autocmd BufRead,BufNewFile  *.txt setlocal spell spelllang=en_us
-autocmd BufRead,BufNewFile  *.tex setlocal spell spelllang=en_us
-autocmd BufRead,BufNewFile  *.md setlocal spell spelllang=en_us
+" autocmd BufRead,BufNewFile  *.txt setlocal spell spelllang=en_us
+" autocmd BufRead,BufNewFile  *.tex setlocal spell spelllang=en_us
+" autocmd BufRead,BufNewFile  *.md setlocal spell spelllang=en_us

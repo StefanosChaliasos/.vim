@@ -20,3 +20,13 @@ pushd ~/.vim/bundle/vimproc.vim
 make
 popd
 ```
+
+## Commands
+
+### Rust
+
+* Formatting
+
+```bash
+:RustFmt
+```
